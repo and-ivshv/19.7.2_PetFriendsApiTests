@@ -156,7 +156,7 @@ def test_add_pet_with_invalid_animal_type(name='Bill', animal_type='*?/|<>,.()[]
     assert result['name'] == name
     print('Добавлен питомец с невалидными данными в поле animal_type.')
 
-def test_add_pet_with_invalid_animal_type(name='*?/|<>,.()[]{};:!@#$^&', animal_type='кот', age='1'):
+def test_add_pet_with_invalid_name(name='*?/|<>,.()[]{};:!@#$^&', animal_type='кот', age='1'):
     """Проверяем возможность добавления питомца с невалидными данными(спецсимволы) в поле 'name'."""
 
     _, api_key = pf.get_api_key(valid_email, valid_password)
